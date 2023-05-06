@@ -8,5 +8,5 @@ Icon=codes.merritt.FeelingFinder
 Exec=feeling-finder %
 Terminal=false
 StartupWMClass=feeling_finder
-X-Flatpak=codes.merritt.FeelingFinder
+
 
