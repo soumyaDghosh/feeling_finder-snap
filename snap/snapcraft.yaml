@@ -22,8 +22,7 @@ apps:
       - optical-drive
       - removable-media
     common-id: codes.merritt.FeelingFinder
-  #desktop: usr/share/applications/.desktop
-
+  
 parts:
   feeling-finder:
     plugin: flutter
@@ -34,12 +33,6 @@ parts:
     override-build: |
       craftctl default
       craftctl set version=$(git describe --tags --abbrev=0)
-    #chmod a+x ./
-    #stage-packages:
-      #- libjsoncpp25
     
-    
-      
-  
       
 
