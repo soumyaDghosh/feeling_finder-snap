@@ -28,6 +28,9 @@ parts:
   feeling-finder:
     plugin: flutter
     source: https://github.com/Merrit/feeling_finder.git
+    build-packages:
+      - curl
+      - build-essential
     override-build: |
       craftctl default
       craftctl set version=$(git describe --tags --abbrev=0)
