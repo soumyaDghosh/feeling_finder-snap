@@ -30,7 +30,7 @@ parts:
       - curl
       - build-essential
     build-snaps:
-      - latest/edge/flutter 
+      - flutter/latest/edge
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags --abbrev=0 | cut -c 2-)
