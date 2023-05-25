@@ -11,7 +11,6 @@ architectures:
   - build-on: amd64
     build-for: amd64
   
-
 apps:
   feeling-finder:
     command: feeling_finder
@@ -30,6 +29,8 @@ parts:
     build-packages:
       - curl
       - build-essential
+    build-snaps:
+      - latest/edge/flutter
     override-build: |
       craftctl default
       craftctl set version=$(git describe --tags --abbrev=0)
