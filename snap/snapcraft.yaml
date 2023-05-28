@@ -1,6 +1,6 @@
 name: feeling-finder
 grade: stable
-version: 1.0.0
+adopt-info: feeling-finder
 summary: A fast and beautiful emoji picker.
 description: |
   Fast and beautiful emoji picker. Easily find the perfect emoji by genre or search.
