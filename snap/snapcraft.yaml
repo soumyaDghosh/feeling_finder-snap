@@ -36,6 +36,9 @@ parts:
       VER="$(git describe --tags --abbrev=0 | cut -c 2-)"
       wget -q -O- https://github.com/Merrit/feeling_finder/releases/download/v${VER}/FeelingFinder-Linux-Portable.tar.gz |\
            tar xzf - --strip-components=1 -C $CRAFT_PART_SRC
-    
+    override-build: |
+      craftctl default
+      chmod a+x ./feeling_finder
+      
     #https://github.com/Merrit/feeling_finder/releases/download/v1.0.0/FeelingFinder-Linux-Portable.tar.gz  
 
