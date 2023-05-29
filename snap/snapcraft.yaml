@@ -3,7 +3,7 @@ grade: stable
 adopt-info: feeling-finder
 summary: A fast and beautiful emoji picker.
 description: |
-  Fast and beautiful emoji picker. Easily find the perfect emoji by genre or search.
+  Fast and beautiful emoji picker. Easily find the perfect emoji by genre.
 base: core22
 confinement: strict
 compression: lzo
