@@ -9,11 +9,10 @@ confinement: strict
 compression: lzo
 architectures:
   - build-on: amd64
-    build-for: amd64
   
 apps:
   feeling-finder:
-    command: feeling_finder
+    command: feeling_finder 
     extensions: [gnome]
     plugs:
       - home
@@ -24,18 +23,18 @@ apps:
   
 parts:
   feeling-finder:
-    plugin: dump
+    plugin: flutter
     source: https://github.com/Merrit/feeling_finder.git
+    source-tag: v1.0.0
     build-packages:
       - curl
-      - build-essential
-      - wget
+      - libsecret-1-dev
+      - libjsoncpp-dev
+    stage-packages:
+      - libsecret-1-0
+      - libjsoncpp25    
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags --abbrev=0 | cut -c 2-)
-      VER="$(git describe --tags --abbrev=0 | cut -c 2-)"
-      wget -q -O- https://github.com/Merrit/feeling_finder/releases/download/v${VER}/FeelingFinder-Linux-Portable.tar.gz
            
-    
-    #https://github.com/Merrit/feeling_finder/releases/download/v1.0.0/FeelingFinder-Linux-Portable.tar.gz  
 
